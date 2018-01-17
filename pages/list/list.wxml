@@ -1,0 +1,12 @@
+  <view class="task-list">
+    <view  class="task-list-item" wx:for="{{taskArr}}">
+      <label class="task-label"> 
+          <checkbox class="task-checkbox"/>
+          <view class="msg-left">
+            <text class="task-title">{{item.title}}</text>
+            <text class="task-type">{{item.type}}</text>
+          </view>
+         <view class="msg-right task-date">{{item.date}}</view>
+      </label>
+      </view>
+  </view>

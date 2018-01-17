@@ -1,0 +1,49 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="banner">
+    <cover-view class="cover-image"></cover-view>
+    <view class="dateMsg">
+        <text class="todo-theme">My Tast</text>
+        <text class="date">2018年1月16日</text>
+    </view>
+    <image class="banner-image"  src="../../public/images/banner.jpg"></image>
+  </view>
+  <view class="task-list">
+    <view  class="task-list-item" wx:for="{{taskArr}}">
+      <label class="task-label"> 
+          <checkbox class="task-checkbox"/>
+          <view class="msg-left">
+            <text class="task-title">{{item.title}}</text>
+            <text class="task-type">{{item.type}}</text>
+          </view>
+         <view class="msg-right task-date">{{item.date}}</view>
+      </label>
+      </view>
+  </view>
+  <view class="bottom-bar add-todo-task" bindtap="addToogle">
+    <text class="add-icon">+</text>
+    <text class="add-text">添加一条任务</text>
+  </view>
+</view>
+<view class="add-task-toast" wx:if="{{toastFlag}}">
+  <view class="add-task-panel">
+    <view class="add-task-title">
+      <text class="add-task-h1">添加任务</text>
+    </view>
+    <view class="section">
+      <text class="add-task-label">标题：</text>
+      <input type="text" bindinput="addTitle"  placeholder="请输入任务标题" focus="true" />
+    </view>
+    <view class="section">
+      <picker bindchange="addType" value="{{index}}" range="{{typeArr}}"><text class="add-task-label picker-label">类型：<text class="typeValue">{{todoType}} </text></text><text class="hr"></text></picker>
+    </view>
+    <view class=" section-content">
+      <text class="add-task-label">内容：</text>
+      <textarea bindinput="addContent" auto-height placeholder="请填写TODO任务" />
+    </view>
+    <view class="button-rows">
+      <button class="canel" type="warn" size="mini" bindtap="taskCanel">取消</button>
+      <button class="confirm" type="primary" size="mini" bindtap="taskConfirm" >确认</button>
+    </view>
+  </view>
+</view>

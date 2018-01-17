@@ -1,0 +1,32 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/list/list",
+    "pages/details/details"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "backgroundColor": "#000000",
+    "navigationBarBackgroundColor": "#B3E5FC",
+    "navigationBarTitleText": "TODO",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": "true"
+  },
+  "tabBar": {
+    "color": "#424242",
+    "selectedColor": "#455A64", 
+    "backgroundColor": "#ffffff",
+    "position": "top",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/list/list",
+        "text": "TODO列表"
+      }
+    ]
+  }
+}
