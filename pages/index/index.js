@@ -6,53 +6,14 @@ const util = require("../../utils/util.js")
 Page({
   data: {
     taskArr: app.globalData.taskData,
-    todoTitle: "",
-    todoType: "work",
-    todoContent: "",
-    typeArr: ["work", "life", "other"],
-    toastFlag: false
   },
   //事件处理函数
   addToogle: function(event) {
-    this.setData({
-      toastFlag: !this.data.toastFlag
-    })
-  },
-  addTitle(event) {
-    this.setData({
-      todoTitle: event.detail.value
-    })
-  },
-  addType(event) {
-    this.setData({
-      todoType: this.data.typeArr[event.detail.value*1]
-    })
-  },
-  addContent(event){
-    this.setData({
-      todoContent: event.detail.value
-    })
-  }, 
-  taskConfirm() {
-    const todoData = {};
-    todoData.title = this.data.todoTitle;
-    todoData.type = this.data.todoType;
-    todoData.date = util.formatTime(new Date());
-    todoData.content = this.data.todoContent;
-    this.setData({
-      taskArr: (() => {this.data.taskArr.unshift(todoData);return this.data.taskArr})(),
-      toastFlag: false
-    })
-     wx.setStorageSync("taskData", this.data.taskArr)
-  },
-  taskCanel () {
-    this.setData({
-      toastFlag: false
+    wx.navigateTo({
+      url: "../create/create"
     })
   },
   onLoad: function () {
-
-
     // if (app.globalData.userInfo) {
     //   this.setData({
     //     userInfo: app.globalData.userInfo,
@@ -79,6 +40,11 @@ Page({
     //     }
     //   })
     // }
+  },
+  onShow: function() {
+    this.setData({
+      taskArr: app.globalData.taskData,
+    })
   },
   getUserInfo: function(e) {
     app.globalData.userInfo = e.detail.userInfo

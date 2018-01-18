@@ -1,0 +1,18 @@
+ <view class="add-task-container">
+    <view class="section">
+      <text class="add-task-label">标题：</text>
+      <text class="hr"></text>
+      <input type="text" class="form-contorl"  bindinput="addTitle"  placeholder="请输入任务标题" focus="true" />
+    </view>
+    <view class="section">
+      <picker bindchange="addType" value="{{index}}" range="{{typeArr}}"><text class="add-task-label picker-label">类型：<text class="typeValue">{{todoType}} </text></text><text class="hr"></text><text class="corn"></text></picker>
+    </view>
+    <view class=" section section-control">
+      <text class="add-task-label">内容：</text>
+      <textarea bindinput="addContent" class="textarea-control" auto-height placeholder="请填写TODO任务" />
+    </view>
+     <view class="button-rows">
+      <button class="canel" type="warn" size="mini" bindtap="taskCanel">取消</button>
+      <button class="confirm" type="primary" size="mini" bindtap="taskConfirm" >确认</button>
+    </view> 
+  </view>

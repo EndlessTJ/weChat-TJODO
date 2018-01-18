@@ -1,0 +1,67 @@
+Page{
+  background: #ffffff;
+}
+.add-task-container{
+  margin-top: 50px;
+  padding: 0 40px
+}
+.section{
+  display: flex;
+  justify-content: flex-start;
+  font-size: 14px;
+  height: 30px;
+  margin: 20px 0;
+  color: #37474F;
+  position: relative;
+}
+.add-task-label{
+  width: 50px;
+  line-height: 30px;
+}
+.form-contorl{
+  width: 100%;
+  padding: 0 5px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.hr{
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 1px;
+  background: #CFD8DC;
+  transform: scale(.5);
+  bottom: 0;
+  left: -50%;
+}
+picker{
+  width: 100%;
+}
+.corn{
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 5px solid #424242;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  right: 5px;
+  top: 10px;
+}
+.textarea-control{
+  width: 100%;
+  min-height: 120px;
+  border: 1px solid #CFD8DC;
+  border-radius: 3px;
+  padding: 5px;
+  box-sizing: border-box;
+  margin-top: 10px;
+}
+.button-rows{
+  display: flex;
+  margin-top: 50px;
+  justify-content: space-around;
+}
+.section-control{
+  height: auto;
+}
