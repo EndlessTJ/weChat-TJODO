@@ -42,8 +42,9 @@ Page({
     // }
   },
   onShow: function() {
+    // console.log("324234")
     this.setData({
-      taskArr: app.globalData.taskData,
+      taskArr: wx.getStorageSync("taskData")
     })
   },
   getUserInfo: function(e) {

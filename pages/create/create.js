@@ -11,7 +11,7 @@ Page({
     todoTitle: "",
     todoType: "work",
     todoContent: "", 
-    taskArr: app.globalData.taskData,
+    taskData: app.globalData.taskData,
   },
   addTitle(event) {
     this.setData({
@@ -34,11 +34,13 @@ Page({
     todoData.type = this.data.todoType;
     todoData.date = util.formatTime(new Date());
     todoData.content = this.data.todoContent;
+    console.log(this.data.taskData)
     this.setData({
-      taskArr: (() => { this.data.taskArr.unshift(todoData); return this.data.taskArr })(),
+      taskData: (() => { this.data.taskData.unshift(todoData); return this.data.taskData })(),
       toastFlag: false
     })
-    wx.setStorageSync("taskData", this.data.taskArr)
+    console.log(this.data.taskData)
+    wx.setStorageSync("taskData", this.data.taskData)
     wx.switchTab({
       url: "../index/index"
     })

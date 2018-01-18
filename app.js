@@ -6,6 +6,7 @@ App({
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
     var taskData = wx.getStorageSync('taskData') || []
+    console.log("app:",taskData)
     this.globalData.taskData = taskData
     // 登录
     wx.login({
