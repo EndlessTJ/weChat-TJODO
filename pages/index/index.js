@@ -42,7 +42,6 @@ Page({
     // }
   },
   onShow: function() {
-    // console.log("324234")
     this.setData({
       taskArr: wx.getStorageSync('taskData') || []
     })

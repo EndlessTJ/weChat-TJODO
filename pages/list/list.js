@@ -7,7 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    taskArr: app.globalData.taskData
+    taskArr: wx.getStorageSync('taskData') || []
   },
 
   /**
