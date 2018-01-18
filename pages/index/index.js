@@ -6,6 +6,7 @@ const taskData = wx.getStorageSync('taskData') || []
 Page({
   data: {
     taskArr: taskData,
+    startDate: util.formatTime(new Date())
   },
   //事件处理函数
   addToogle: function(event) {

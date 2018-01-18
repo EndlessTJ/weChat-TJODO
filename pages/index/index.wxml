@@ -4,7 +4,7 @@
     <cover-view class="cover-image"></cover-view>
     <view class="dateMsg">
         <text class="todo-theme">My Tast</text>
-        <text class="date">2018年1月16日</text>
+        <text class="date">{{startDate}}</text>
     </view>
     <image class="banner-image"  src="../../public/images/banner.jpg"></image>
   </view>

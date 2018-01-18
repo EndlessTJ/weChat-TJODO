@@ -10,5 +10,5 @@
    margin-bottom: 50px;
 } 
 Page{
-  background: #f7f7f7;
+  background: #eeeeee;
 }

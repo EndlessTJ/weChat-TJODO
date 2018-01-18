@@ -1,14 +1,18 @@
 .task-list{
-  width: 100%;
+  width: 95%;
+  margin: 0 auto;
 }
 .task-list-item{
   width: 100%;
-  height: 120rpx;
+  height: 320rpx;
   position: relative;
   display: block;
-  padding: 0 20rpx;
+  padding: 0 130rpx 0 30rpx;
   line-height: 120rpx;
   box-sizing: border-box;
+  background: #ffffff;
+  margin-top: 10px;
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
 }
 .task-list-item::after{
   content: "";
@@ -33,7 +37,7 @@
   font-size: 14px;
 }
 .msg-left{
-  padding: 30rpx 0 15rpx  30rpx;
+  padding: 30rpx 0 15rpx  0;
   box-sizing: border-box;
 }
 .task-title,.task-type{
@@ -48,4 +52,12 @@
   float: right;
   color: #546E7A;
   font-size: 12px; 
+}
+.corn{
+  position: absolute;
+  color: #9E9E9E;
+  font-size: 40px;
+  right: 20px;
+  top: 0;
+  font-weight: 100;
 }
