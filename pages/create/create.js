@@ -1,8 +1,6 @@
-const app = getApp();
 const util = require("../../utils/util.js")
 
 Page({
-
   /**
    * 页面的初始数据
    */
@@ -10,8 +8,7 @@ Page({
     typeArr: ["work", "life", "other"],
     todoTitle: "",
     todoType: "work",
-    todoContent: "", 
-    taskData: app.globalData.taskData,
+    todoContent: "",
   },
   addTitle(event) {
     this.setData({
@@ -30,17 +27,13 @@ Page({
   },
   taskConfirm() {
     const todoData = {};
+    const taskData = wx.getStorageSync('taskData') || []
     todoData.title = this.data.todoTitle;
     todoData.type = this.data.todoType;
     todoData.date = util.formatTime(new Date());
     todoData.content = this.data.todoContent;
-    console.log(this.data.taskData)
-    this.setData({
-      taskData: (() => { this.data.taskData.unshift(todoData); return this.data.taskData })(),
-      toastFlag: false
-    })
-    console.log(this.data.taskData)
-    wx.setStorageSync("taskData", this.data.taskData)
+    taskData.unshift(todoData)
+    wx.setStorageSync("taskData", taskData)
     wx.switchTab({
       url: "../index/index"
     })

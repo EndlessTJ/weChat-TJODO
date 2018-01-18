@@ -2,10 +2,10 @@
 //获取应用实例
 const app = getApp();
 const util = require("../../utils/util.js")
-
+const taskData = wx.getStorageSync('taskData') || []
 Page({
   data: {
-    taskArr: app.globalData.taskData,
+    taskArr: taskData,
   },
   //事件处理函数
   addToogle: function(event) {
@@ -44,7 +44,7 @@ Page({
   onShow: function() {
     // console.log("324234")
     this.setData({
-      taskArr: wx.getStorageSync("taskData")
+      taskArr: wx.getStorageSync('taskData') || []
     })
   },
   getUserInfo: function(e) {
