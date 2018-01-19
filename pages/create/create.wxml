@@ -1,12 +1,12 @@
  <view class="add-task-container">
     <view class="section">
-      <picker bindchange="addDate" mode="date"  value="{{warnDate}}"><text class="add-task-label picker-label">设置提醒日期：<text class="typeValue">{{warnDate}} </text></text><text class="hr"></text><text class="corn"></text></picker>
+      <picker bindchange="addDate" mode="date"  value="{{warnDate}}"><icon class="date-icon" size="40"/><text class="typeValue">{{warnDate}}</text><text class="hr"></text><text class="corn"></text></picker>
     </view>
      <view class="section">
-      <picker bindchange="addTime" mode="time" value="{{warnTime}}"><text class="add-task-label picker-label">设置提醒时间：<text class="typeValue">{{warnTime}} </text></text><text class="hr"></text><text class="corn"></text></picker>
+      <picker bindchange="addTime" mode="time" value="{{warnTime}}"><icon class="time-icon" size="40"/><text class="typeValue">{{warnTime}} </text><text class="hr"></text><text class="corn"></text></picker>
     </view>
     <view class=" section section-control">
-      <text class="add-task-label">内容：</text>
+      <icon class="content-icon" size="40"/>
       <textarea bindinput="addContent" class="textarea-control" auto-height placeholder="请填写TODO任务" />
     </view>
      <view class="button-rows">
