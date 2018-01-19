@@ -1,11 +1,9 @@
  <view class="add-task-container">
     <view class="section">
-      <text class="add-task-label">标题：</text>
-      <text class="hr"></text>
-      <input type="text" class="form-contorl"  bindinput="addTitle"  placeholder="请输入任务标题" focus="true" />
+      <picker bindchange="addDate" mode="date"  value="{{warnDate}}"><text class="add-task-label picker-label">设置提醒日期：<text class="typeValue">{{warnDate}} </text></text><text class="hr"></text><text class="corn"></text></picker>
     </view>
-    <view class="section">
-      <picker bindchange="addType" value="{{index}}" range="{{typeArr}}"><text class="add-task-label picker-label">类型：<text class="typeValue">{{todoType}} </text></text><text class="hr"></text><text class="corn"></text></picker>
+     <view class="section">
+      <picker bindchange="addTime" mode="time" value="{{warnTime}}"><text class="add-task-label picker-label">设置提醒时间：<text class="typeValue">{{warnTime}} </text></text><text class="hr"></text><text class="corn"></text></picker>
     </view>
     <view class=" section section-control">
       <text class="add-task-label">内容：</text>

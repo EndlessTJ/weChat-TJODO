@@ -3,8 +3,8 @@
   <view class="banner">
     <cover-view class="cover-image"></cover-view>
     <view class="dateMsg">
-        <text class="todo-theme">My Tast</text>
-        <text class="date">{{startDate}}</text>
+        <text class="todo-theme">My Task</text>
+        <text class="date">{{startDate.date}}</text>
     </view>
     <image class="banner-image"  src="../../public/images/banner.jpg"></image>
   </view>
@@ -13,10 +13,9 @@
       <label class="task-label"> 
           <checkbox class="task-checkbox"/>
           <view class="msg-left">
-            <text class="task-title">{{item.title}}</text>
-            <text class="task-type">{{item.type}}</text>
+            <text class="task-title">{{item.content}}</text>
           </view>
-         <view class="msg-right task-date">{{item.date}}</view>
+         <view class="msg-right task-date"><text>{{item.date}}    {{item.time}}</text></view>
       </label>
       </view>
   </view>

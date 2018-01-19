@@ -1,17 +1,13 @@
   <view class="task-list">
     <view  class="task-list-item"  wx:for="{{taskArr}}">
           <view class="header-wrap">
-            <text class="title" >{{item.title}}</text>
-            <label class="checkbox">
-                <checkbox class="ws-checkbox "  value="" />完成归档
-              </label>
+           <label class="checkbox">
+               <checkbox class="ws-checkbox "  value="" />完成归档
+            </label>
+            <text class="date" >{{item.date}}  {{item.time}}</text>
           </view>
           <view class="content-wrap">
             <text class="content">{{item.content}}</text>
-          </view>
-          <view class="footer-wrap">
-            <text class="date">{{item.date}}</text>
-             <text class="type" >{{item.type}}</text>
           </view>
       </view>
   </view>

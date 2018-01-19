@@ -5,19 +5,18 @@ Page({
    * 页面的初始数据
    */
   data: {
-    typeArr: ["work", "life", "other"],
-    todoTitle: "",
-    todoType: "work",
+    warnDate: util.formatTime(new Date()).date,
+    warnTime: util.formatTime(new Date()).time,
     todoContent: "",
   },
-  addTitle(event) {
+  addDate(event) {
     this.setData({
-      todoTitle: event.detail.value
+      warnDate: event.detail.value
     })
   },
-  addType(event) {
+  addTime(event) {
     this.setData({
-      todoType: this.data.typeArr[event.detail.value * 1]
+      warnTime: event.detail.value
     })
   },
   addContent(event) {
@@ -28,9 +27,8 @@ Page({
   taskConfirm() {
     const todoData = {};
     const taskData = wx.getStorageSync('taskData') || []
-    todoData.title = this.data.todoTitle;
-    todoData.type = this.data.todoType;
-    todoData.date = util.formatTime(new Date());
+    todoData.date = this.data.warnDate;
+    todoData.time = this.data.warnTime;
     todoData.content = this.data.todoContent;
     taskData.unshift(todoData)
     wx.setStorageSync("taskData", taskData)

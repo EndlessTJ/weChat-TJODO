@@ -27,15 +27,8 @@
   color: #455A64;
   border-bottom: 1px solid #eee;
 }
-.title{
-  font-size: 18px;
-  font-weight: 500;
-}
-.type{
-  opacity: .5;
-}
 .content-wrap{
-  height:85px;
+  height:135px;
   box-sizing: border-box;
   padding: 10px 6px 0;
   color: #37474F;
@@ -45,15 +38,9 @@
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
   padding: 0 15px;
-}
-.footer-wrap{
-  height: 35px;
-  line-height: 35px;
-  margin-top: 15px;
-  border-top: 1px solid #eee;
 }
 .date{
   font-size: 13px;
@@ -70,11 +57,11 @@ label{
 }
 .ws-checkbox {
   display: inline-block;
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADWSURBVGhD7Zk7CgJBEAVXPaOJgR88kbcQNVfvYOSF9L1AaGRgFmmYcamCCp904WYzAMBPLORe3uWjE33LVs7lKBxxka9OPUvfWMX/ROkHenInq9xkadyTV1nlKePoIJeN9Q3xJt9Y5TtkJVvjG+JNhLSGkDgiJBFC4oiQRAiJI0ISISSOCEmEkDgiJBFC4oiQRAiJI0ISISSOCEmEkDgiJBFC4mgyIX/70DOZpzc/NJbGPbmWVfyOfZKlH+jBo5zJUThmI/2ZlR7vW+jPyTeNjgCAD8PwBgYKXeA/rsDvAAAAAElFTkSuQmCC);
   background-size: 100%;
-  margin-right: 10px;
+  margin-right: 5px;
 }
 
 .ws-checkbox[checked] {

@@ -71,13 +71,10 @@
   font-size: 14px;
 }
 .msg-left{
-  padding: 30rpx 0 15rpx  30rpx;
-  box-sizing: border-box;
-}
-.task-title,.task-type{
-    display: block;
-    line-height:30rpx;
-    height: 30rpx;
+  width: 50%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .task-type{
      margin-top:10rpx;  
@@ -129,7 +126,8 @@ input{
   height: 22px;
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADWSURBVGhD7Zk7CgJBEAVXPaOJgR88kbcQNVfvYOSF9L1AaGRgFmmYcamCCp904WYzAMBPLORe3uWjE33LVs7lKBxxka9OPUvfWMX/ROkHenInq9xkadyTV1nlKePoIJeN9Q3xJt9Y5TtkJVvjG+JNhLSGkDgiJBFC4oiQRAiJI0ISISSOCEmEkDgiJBFC4oiQRAiJI0ISISSOCEmEkDgiJBFC4mgyIX/70DOZpzc/NJbGPbmWVfyOfZKlH+jBo5zJUThmI/2ZlR7vW+jPyTeNjgCAD8PwBgYKXeA/rsDvAAAAAElFTkSuQmCC);
   background-size: 100%;
-  margin-top: 20px
+  margin-top: 20px;
+  margin-right: 10px;
 }
 
 .task-checkbox[checked] {
